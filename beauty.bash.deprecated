@@ -1,0 +1,26 @@
+#!/bin/bash
+IFS=$'\t\n'
+declare -i scene=1
+declare -i dca=1
+
+
+for line in $(cat ./beauty2.txt)
+do
+
+echo $dca
+echo $line;
+
+((dca++))
+
+if [ $dca -eq 9 ] 
+then 
+
+dca=1
+((scene++))
+
+echo SSSSsssssssssssSSSSSSSSSSSSSSSSSSS  $scene
+
+fi
+
+
+done
